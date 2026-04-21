@@ -1,0 +1,44 @@
+<svg width="720" height="520" viewBox="0 0 720 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="720" height="520" rx="36" fill="#FBF8F2"/>
+  <rect x="26" y="26" width="668" height="468" rx="26" fill="#FFFDF8" stroke="#E9DED1"/>
+  <text x="54" y="84" fill="#9D3B18" font-family="Manrope, sans-serif" font-size="22" font-weight="800">CHINA JOURNEY</text>
+  <text x="54" y="112" fill="#665A4D" font-family="Manrope, sans-serif" font-size="15" font-weight="600">Places that shaped Sihan Hou</text>
+
+  <path d="M149 170C173 145 212 120 268 112C321 104 371 115 421 110C463 106 486 88 525 95C549 100 576 118 591 144C605 168 604 194 585 214C572 228 569 247 577 262C588 281 588 303 573 320C554 341 516 348 488 344C467 341 456 349 447 366C433 393 401 412 358 413C324 414 296 403 279 384C262 364 250 359 225 360C192 361 160 347 145 324C132 304 132 281 147 262C161 245 166 227 163 207C160 193 158 181 149 170Z" fill="#F4E6DA" stroke="#D7B79E" stroke-width="3"/>
+
+  <path d="M420 145C446 138 472 141 493 155" stroke="#C55C33" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="4 7"/>
+  <path d="M417 178C463 185 505 209 533 241" stroke="#C55C33" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="4 7"/>
+  <path d="M397 270C411 300 418 334 420 371" stroke="#C55C33" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="4 7"/>
+
+  <circle cx="398" cy="267" r="9" fill="#C55C33"/>
+  <circle cx="420" cy="175" r="9" fill="#C55C33"/>
+  <circle cx="530" cy="238" r="9" fill="#C55C33"/>
+
+  <circle cx="374" cy="289" r="7" fill="#F29867"/>
+  <circle cx="388" cy="280" r="7" fill="#F29867"/>
+
+  <path d="M420 175L488 137" stroke="#9D3B18" stroke-width="2"/>
+  <path d="M530 238L604 228" stroke="#9D3B18" stroke-width="2"/>
+  <path d="M398 267L462 377" stroke="#9D3B18" stroke-width="2"/>
+  <path d="M388 280L258 364" stroke="#9D3B18" stroke-width="2"/>
+
+  <rect x="489" y="113" width="124" height="42" rx="14" fill="#FFF4EC" stroke="#E7C6B2"/>
+  <text x="503" y="139" fill="#241D16" font-family="Manrope, sans-serif" font-size="16" font-weight="800">Nanjing</text>
+
+  <rect x="605" y="206" width="78" height="42" rx="14" fill="#FFF4EC" stroke="#E7C6B2"/>
+  <text x="619" y="232" fill="#241D16" font-family="Manrope, sans-serif" font-size="16" font-weight="800">Tianjin</text>
+
+  <rect x="463" y="357" width="138" height="42" rx="14" fill="#FFF4EC" stroke="#E7C6B2"/>
+  <text x="477" y="383" fill="#241D16" font-family="Manrope, sans-serif" font-size="16" font-weight="800">Xiangtan</text>
+
+  <rect x="122" y="343" width="126" height="42" rx="14" fill="#FFF4EC" stroke="#E7C6B2"/>
+  <text x="136" y="369" fill="#241D16" font-family="Manrope, sans-serif" font-size="16" font-weight="800">Hengdong</text>
+
+  <text x="505" y="166" fill="#665A4D" font-family="IBM Plex Mono, monospace" font-size="12">2014-2023</text>
+  <text x="619" y="259" fill="#665A4D" font-family="IBM Plex Mono, monospace" font-size="12">2023-now</text>
+  <text x="477" y="410" fill="#665A4D" font-family="IBM Plex Mono, monospace" font-size="12">2011-2014</text>
+  <text x="136" y="396" fill="#665A4D" font-family="IBM Plex Mono, monospace" font-size="12">hometown</text>
+
+  <rect x="52" y="424" width="616" height="44" rx="18" fill="#F8F2EA"/>
+  <text x="76" y="452" fill="#665A4D" font-family="Manrope, sans-serif" font-size="14" font-weight="600">Route: Hengdong → Xiangtan → Nanjing → Tianjin</text>
+</svg>

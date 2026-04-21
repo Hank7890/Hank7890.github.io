@@ -290,6 +290,14 @@ body.theme-claude .visitor-map img {
   border: 0;
 }
 
+body.theme-claude .life-map {
+  padding: 10px;
+}
+
+body.theme-claude .life-map img {
+  border-radius: 16px;
+}
+
 body.theme-claude .info-panel {
   display: grid;
   gap: 10px;

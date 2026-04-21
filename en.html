@@ -83,10 +83,8 @@
           <span class="school-badge">XT</span>
         </div>
 
-        <div class="visitor-map">
-          <a href="https://clustrmaps.com/site/1c8lz" title="Visitor Map" target="_blank" rel="noreferrer">
-            <img id="clustrmap-sidebar" src="https://www.clustrmaps.com/map_v2.png?cl=c2714f&w=300&t=tt&d=2TdrBvABEGrBC_bDnUoKBxbOtj0sjGIy1JJrExxZxZM&co=faf9f7&ct=3d3929" alt="Visitor map">
-          </a>
+        <div class="visitor-map life-map">
+          <img src="assets/img/china-journey-map.svg" alt="China journey map for Sihan Hou">
         </div>
 
         <div class="info-panel">
@@ -273,17 +271,6 @@
       const themeToggle = document.getElementById("themeToggle");
       const icon = themeToggle.querySelector("i");
       const iconHint = document.getElementById("iconHint");
-      const mapImage = document.getElementById("clustrmap-sidebar");
-
-      function updateMap(isDark) {
-        if (!mapImage) return;
-        const base = "https://www.clustrmaps.com/map_v2.png?w=300&t=tt&d=2TdrBvABEGrBC_bDnUoKBxbOtj0sjGIy1JJrExxZxZM";
-        const cl = isDark ? "e28a67" : "c2714f";
-        const co = isDark ? "1a1917" : "faf9f7";
-        const ct = isDark ? "d1cec7" : "3d3929";
-        mapImage.src = base + "&cl=" + cl + "&co=" + co + "&ct=" + ct;
-      }
-
       function setTheme(isDark) {
         if (isDark) {
           document.documentElement.setAttribute("data-theme", "dark");
@@ -294,7 +281,6 @@
           icon.classList.replace("fa-sun", "fa-moon");
           localStorage.setItem("theme", "light");
         }
-        updateMap(isDark);
       }
 
       const savedTheme = localStorage.getItem("theme");

@@ -1,44 +1,101 @@
 <svg width="720" height="520" viewBox="0 0 720 520" fill="none" xmlns="http://www.w3.org/2000/svg">
   <rect width="720" height="520" rx="36" fill="#FBF8F2"/>
-  <rect x="26" y="26" width="668" height="468" rx="26" fill="#FFFDF8" stroke="#E9DED1"/>
-  <text x="54" y="84" fill="#9D3B18" font-family="Manrope, sans-serif" font-size="22" font-weight="800">CHINA JOURNEY</text>
-  <text x="54" y="112" fill="#665A4D" font-family="Manrope, sans-serif" font-size="15" font-weight="600">Places that shaped Sihan Hou</text>
+  <rect x="24" y="24" width="672" height="472" rx="28" fill="#FFFDF8" stroke="#E9DED1"/>
 
-  <path d="M149 170C173 145 212 120 268 112C321 104 371 115 421 110C463 106 486 88 525 95C549 100 576 118 591 144C605 168 604 194 585 214C572 228 569 247 577 262C588 281 588 303 573 320C554 341 516 348 488 344C467 341 456 349 447 366C433 393 401 412 358 413C324 414 296 403 279 384C262 364 250 359 225 360C192 361 160 347 145 324C132 304 132 281 147 262C161 245 166 227 163 207C160 193 158 181 149 170Z" fill="#F4E6DA" stroke="#D7B79E" stroke-width="3"/>
+  <text x="52" y="74" fill="#9D3B18" font-family="Manrope, sans-serif" font-size="24" font-weight="800">CHINA JOURNEY MAP</text>
+  <text x="52" y="104" fill="#665A4D" font-family="Manrope, sans-serif" font-size="15" font-weight="600">Study and growth path across South China, East China, and North China</text>
 
-  <path d="M420 145C446 138 472 141 493 155" stroke="#C55C33" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="4 7"/>
-  <path d="M417 178C463 185 505 209 533 241" stroke="#C55C33" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="4 7"/>
-  <path d="M397 270C411 300 418 334 420 371" stroke="#C55C33" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="4 7"/>
+  <rect x="62" y="126" width="596" height="312" rx="24" fill="#FAF4EC" stroke="#E9DED1"/>
 
-  <circle cx="398" cy="267" r="9" fill="#C55C33"/>
-  <circle cx="420" cy="175" r="9" fill="#C55C33"/>
-  <circle cx="530" cy="238" r="9" fill="#C55C33"/>
+  <path d="M132 203
+           C156 176 190 162 230 156
+           C256 137 289 126 326 124
+           C363 122 391 131 420 126
+           C447 121 475 108 508 110
+           C541 112 571 126 595 151
+           C615 171 623 196 617 218
+           C612 236 615 249 627 264
+           C639 280 639 299 627 313
+           C612 331 586 338 558 336
+           C533 335 519 341 507 355
+           C491 374 467 386 439 390
+           C413 393 388 391 367 381
+           C348 372 330 368 311 375
+           C286 385 258 382 238 369
+           C217 355 197 352 173 354
+           C148 356 127 348 115 332
+           C104 317 101 298 108 280
+           C116 259 115 242 106 226
+           C98 211 104 196 118 188
+           C123 186 128 192 132 203Z"
+        fill="#F1E0D0"
+        stroke="#D7B79E"
+        stroke-width="3"/>
 
-  <circle cx="374" cy="289" r="7" fill="#F29867"/>
-  <circle cx="388" cy="280" r="7" fill="#F29867"/>
+  <path d="M476 193
+           C487 184 502 182 517 186
+           C531 190 541 199 548 211
+           C553 220 552 232 544 240
+           C535 249 521 250 509 245
+           C497 240 486 238 476 240"
+        fill="#F6EBDD"
+        stroke="#D7B79E"
+        stroke-width="2.5"/>
 
-  <path d="M420 175L488 137" stroke="#9D3B18" stroke-width="2"/>
-  <path d="M530 238L604 228" stroke="#9D3B18" stroke-width="2"/>
-  <path d="M398 267L462 377" stroke="#9D3B18" stroke-width="2"/>
-  <path d="M388 280L258 364" stroke="#9D3B18" stroke-width="2"/>
+  <path d="M480 165
+           C504 155 531 155 552 164
+           C570 171 582 184 590 199"
+        stroke="#C55C33"
+        stroke-width="2.5"
+        stroke-linecap="round"
+        stroke-dasharray="5 7"/>
+  <path d="M478 192
+           C490 207 493 230 485 251
+           C478 269 468 286 457 307"
+        stroke="#C55C33"
+        stroke-width="2.5"
+        stroke-linecap="round"
+        stroke-dasharray="5 7"/>
+  <path d="M456 307
+           C437 314 420 324 402 337
+           C387 347 374 355 364 364"
+        stroke="#C55C33"
+        stroke-width="2.5"
+        stroke-linecap="round"
+        stroke-dasharray="5 7"/>
+  <path d="M364 364
+           C355 368 347 373 339 379"
+        stroke="#C55C33"
+        stroke-width="2.5"
+        stroke-linecap="round"
+        stroke-dasharray="5 7"/>
 
-  <rect x="489" y="113" width="124" height="42" rx="14" fill="#FFF4EC" stroke="#E7C6B2"/>
-  <text x="503" y="139" fill="#241D16" font-family="Manrope, sans-serif" font-size="16" font-weight="800">Nanjing</text>
+  <circle cx="476" cy="192" r="9" fill="#C55C33"/>
+  <circle cx="456" cy="307" r="9" fill="#C55C33"/>
+  <circle cx="364" cy="364" r="9" fill="#C55C33"/>
+  <circle cx="339" cy="379" r="8" fill="#F29867"/>
 
-  <rect x="605" y="206" width="78" height="42" rx="14" fill="#FFF4EC" stroke="#E7C6B2"/>
-  <text x="619" y="232" fill="#241D16" font-family="Manrope, sans-serif" font-size="16" font-weight="800">Tianjin</text>
+  <path d="M476 192L565 150" stroke="#9D3B18" stroke-width="2"/>
+  <path d="M456 307L530 302" stroke="#9D3B18" stroke-width="2"/>
+  <path d="M364 364L188 406" stroke="#9D3B18" stroke-width="2"/>
+  <path d="M339 379L470 404" stroke="#9D3B18" stroke-width="2"/>
 
-  <rect x="463" y="357" width="138" height="42" rx="14" fill="#FFF4EC" stroke="#E7C6B2"/>
-  <text x="477" y="383" fill="#241D16" font-family="Manrope, sans-serif" font-size="16" font-weight="800">Xiangtan</text>
+  <rect x="566" y="128" width="88" height="40" rx="14" fill="#FFF4EC" stroke="#E7C6B2"/>
+  <text x="580" y="153" fill="#241D16" font-family="Manrope, sans-serif" font-size="16" font-weight="800">Tianjin</text>
+  <text x="580" y="182" fill="#665A4D" font-family="IBM Plex Mono, monospace" font-size="12">2023-now</text>
 
-  <rect x="122" y="343" width="126" height="42" rx="14" fill="#FFF4EC" stroke="#E7C6B2"/>
-  <text x="136" y="369" fill="#241D16" font-family="Manrope, sans-serif" font-size="16" font-weight="800">Hengdong</text>
+  <rect x="531" y="280" width="104" height="40" rx="14" fill="#FFF4EC" stroke="#E7C6B2"/>
+  <text x="545" y="305" fill="#241D16" font-family="Manrope, sans-serif" font-size="16" font-weight="800">Nanjing</text>
+  <text x="545" y="334" fill="#665A4D" font-family="IBM Plex Mono, monospace" font-size="12">2014-2023</text>
 
-  <text x="505" y="166" fill="#665A4D" font-family="IBM Plex Mono, monospace" font-size="12">2014-2023</text>
-  <text x="619" y="259" fill="#665A4D" font-family="IBM Plex Mono, monospace" font-size="12">2023-now</text>
-  <text x="477" y="410" fill="#665A4D" font-family="IBM Plex Mono, monospace" font-size="12">2011-2014</text>
-  <text x="136" y="396" fill="#665A4D" font-family="IBM Plex Mono, monospace" font-size="12">hometown</text>
+  <rect x="122" y="384" width="126" height="40" rx="14" fill="#FFF4EC" stroke="#E7C6B2"/>
+  <text x="136" y="409" fill="#241D16" font-family="Manrope, sans-serif" font-size="16" font-weight="800">Xiangtan</text>
+  <text x="136" y="438" fill="#665A4D" font-family="IBM Plex Mono, monospace" font-size="12">2011-2014</text>
 
-  <rect x="52" y="424" width="616" height="44" rx="18" fill="#F8F2EA"/>
-  <text x="76" y="452" fill="#665A4D" font-family="Manrope, sans-serif" font-size="14" font-weight="600">Route: Hengdong → Xiangtan → Nanjing → Tianjin</text>
+  <rect x="471" y="382" width="128" height="40" rx="14" fill="#FFF4EC" stroke="#E7C6B2"/>
+  <text x="485" y="407" fill="#241D16" font-family="Manrope, sans-serif" font-size="16" font-weight="800">Hengdong</text>
+  <text x="485" y="436" fill="#665A4D" font-family="IBM Plex Mono, monospace" font-size="12">hometown</text>
+
+  <rect x="52" y="454" width="616" height="28" rx="14" fill="#F8F2EA"/>
+  <text x="74" y="473" fill="#665A4D" font-family="Manrope, sans-serif" font-size="13" font-weight="700">Route: Xiangtan → Hengdong → Nanjing → Tianjin</text>
 </svg>

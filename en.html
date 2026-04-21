@@ -62,10 +62,18 @@
           <a class="secondary-action" href="index.html">中文版本</a>
         </div>
 
-        <div class="social-icons">
-          <a href="mailto:2310303@nankai.edu.cn" title="School Email"><i class="fa-solid fa-envelope"></i></a>
-          <a href="mailto:sihanhou123@gmail.com" title="Personal Email"><i class="fa-regular fa-paper-plane"></i></a>
-          <a href="assets/cv/Sihan_Hou_CV.pdf" title="CV" target="_blank" rel="noreferrer"><i class="fa-solid fa-file-lines"></i></a>
+        <div class="contact-links">
+          <div class="contact-link-group">
+            <a class="contact-link" href="mailto:2310303@nankai.edu.cn" title="School Email">School Email</a>
+            <button class="contact-copy" type="button" data-copy="2310303@nankai.edu.cn">Copy</button>
+          </div>
+          <div class="contact-link-group">
+            <a class="contact-link" href="mailto:sihanhou123@gmail.com" title="Personal Email">Personal Email</a>
+            <button class="contact-copy" type="button" data-copy="sihanhou123@gmail.com">Copy</button>
+          </div>
+          <div class="contact-link-group">
+            <a class="contact-link" href="assets/cv/Sihan_Hou_CV.pdf" title="CV" target="_blank" rel="noreferrer">CV / Resume</a>
+          </div>
         </div>
 
         <div class="info-panel">
@@ -258,6 +266,22 @@
           }
         });
       }
+
+      document.querySelectorAll(".contact-copy").forEach(function (button) {
+        button.addEventListener("click", async function () {
+          const text = button.getAttribute("data-copy");
+          try {
+            await navigator.clipboard.writeText(text);
+            const original = button.textContent;
+            button.textContent = "Copied";
+            setTimeout(function () {
+              button.textContent = original;
+            }, 1200);
+          } catch (error) {
+            window.prompt("Copy this email address:", text);
+          }
+        });
+      });
     })();
   </script>
 </body>

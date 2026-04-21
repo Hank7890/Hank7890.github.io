@@ -1,58 +1,110 @@
-# 🚀 极简学术主页模板 (Minimal Academic Homepage)
+# 个人主页模板
 
-这是一个基于 HTML/CSS 的极简学术主页模板，专为研究人员、学生和学者设计。它具有响应式设计、深色模式支持、优雅的排版以及易于定制的特点。
+这是一个可以直接部署到 GitHub Pages 的静态个人主页模板。  
+核心文件很简单：
 
-> [!TIP]
-> 如果你觉得这个模板对你有帮助，欢迎给一个 Star 🌟！
+- `index.html`：页面内容
+- `assets/css/theme-claude.css`：主题样式
+- `assets/img/`：头像、图标、学校或公司 Logo
+- `assets/cv/`：简历 PDF
 
-## ✨ 特性
+## 这个仓库我已经帮你改成什么
 
-- **极简设计**：聚焦内容，去除冗余，参考了 [Claude.ai](https://claude.ai) 的视觉风格。
-- **响应式布局**：在手机、平板和桌面端都有良好的显示效果。
-- **深色模式**：支持手动切换和系统自动随动。
-- **学术友好**：内置教育背景、研究经历、项目展示、论文列表（支持图标链接）和获奖情况等板块。
-- **易于部署**：纯静态页面，无需任何构建步骤，直接托管在 GitHub Pages。
+原仓库是一个学术主页模板，我已经把它改成更通用的个人主页版本，适合：
 
-## 🛠️ 快速开始：定制你的主页
+- 学生主页
+- 开发者主页
+- 求职作品集
+- 科研或竞赛展示页
 
-你可以通过以下步骤快速创建属于自己的主页：
+现在你只需要把页面里的占位内容替换掉，就可以上线。
 
-### 1. Fork 本仓库
-点击仓库右上角的 **Fork** 按钮，将代码克隆到你自己的 GitHub 账号下。
+## 你接下来需要替换的内容
 
-### 2. 修改个人信息
-打开 `index.html` 文件，搜索并替换以下内容：
-- **基本信息**：姓名、邮箱、头像路径。
-- **社交链接**：修改 `social-icons` 部分的链接（GitHub, Google Scholar, LinkedIn 等）。
-- **板块内容**：
-  - `About Me`：简短的自我介绍。
-  - `Education`：替换学校 Logo 和学位信息。
-  - `Experience`：添加你的实习或研究经历。
-  - `Publications`：按照格式添加你的论文。
-  - `Awards`：列出你的荣誉。
+打开 `index.html`，搜索并替换这些字段：
 
-### 3. 替换资源文件
-- **头像**：将你的头像放入 `assets/img/` 并命名为 `avatar.png`。
-- **Logo**：将学校或机构的 Logo 放入 `assets/img/`。
-- **简历**：将你的 PDF 简历放入 `assets/cv/`。
+- `[你的名字]`
+- `your_email@example.com`
+- `your-username`
+- `[城市 / 学校 / 公司]`
+- `[项目名称 A/B/C]`
+- `[职位名称]`
+- `[你的城市 / 时区]`
 
-### 4. 开启 GitHub Pages
-在你的仓库设置中：
-1. 进入 `Settings` -> `Pages`。
-2. 在 `Build and deployment` 下，选择 `Deploy from a branch`。
-3. 选择 `main` 分支和 `/ (root)` 目录，点击 `Save`。
-4. 几分钟后，你的主页就会在 `https://<your-username>.github.io` 上线。
+建议优先改这些部分：
 
-## 🎨 进阶定制
+1. 页面标题和个人简介
+2. 左侧头像、邮箱、社交链接
+3. 经历区块
+4. 项目区块
+5. 联系方式
 
-### 修改主题颜色
-如果你想修改主题色（如链接颜色、强调色），可以编辑 `assets/css/theme-claude.css`。
+## 资源文件怎么换
 
-### 访客地图
-主页集成了 [ClustrMaps](https://clustrmaps.com/)。你可以去官网注册并获取你自己的地图 ID，然后替换 `index.html` 中 `updateMap` 函数里的相关参数。
+### 头像
 
-## 📄 许可证
-本项目采用 [MIT License](LICENSE.md) 开源。
+把你的头像放到：
 
----
-由 [Yuheng Yang](https://github.com/wzsyyh) 维护。
+- `assets/img/avatar.jpg`
+
+如果你想保留原图做备份，也可以继续用现有命名，只要把 `index.html` 里的路径改掉。
+
+### 简历
+
+把你的 PDF 简历放到：
+
+- `assets/cv/`
+
+然后把 `index.html` 里的简历链接改成你的文件名。
+
+### Logo
+
+如果你不需要学校或公司 Logo，可以：
+
+- 替换成你自己的 Logo
+- 或直接删掉对应的 `<img>` 标签
+
+## 如何发布到 GitHub Pages
+
+如果这个仓库就是你的主页仓库，仓库名建议是：
+
+- `你的 GitHub 用户名.github.io`
+
+然后在 GitHub 仓库设置里启用 Pages：
+
+1. 打开 `Settings`
+2. 进入 `Pages`
+3. `Build and deployment` 选择 `Deploy from a branch`
+4. 分支选 `main`
+5. 文件夹选 `/ (root)`
+6. 保存
+
+几分钟后，你的主页会出现在：
+
+- `https://你的用户名.github.io`
+
+## 建议你下一步这样做
+
+如果你要把它真正变成你的主页，不要只换名字，最好补上这些内容：
+
+- 一段具体的自我介绍
+- 2 到 4 段真实经历
+- 2 到 3 个最能代表你的项目
+- 明确的联系方式
+
+内容比花哨更重要，但空白和套话都不行。
+
+## 本地预览
+
+这是纯静态页面，直接双击 `index.html` 就能看。  
+如果你想用本地服务器预览，也可以在仓库目录运行：
+
+```powershell
+python -m http.server 8000
+```
+
+然后访问：
+
+```text
+http://localhost:8000
+```

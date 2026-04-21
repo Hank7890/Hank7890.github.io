@@ -75,6 +75,20 @@
         </div>
         <p class="icon-hint" id="iconHint">点击邮箱图标可复制地址</p>
 
+        <div class="school-badge-grid">
+          <span class="school-badge">NKU</span>
+          <span class="school-badge">中华</span>
+          <span class="school-badge">河西</span>
+          <span class="school-badge">金小</span>
+          <span class="school-badge">湘潭</span>
+        </div>
+
+        <div class="visitor-map">
+          <a href="https://clustrmaps.com/site/1c8lz" title="Visitor Map" target="_blank" rel="noreferrer">
+            <img id="clustrmap-sidebar" src="https://www.clustrmaps.com/map_v2.png?cl=c2714f&w=300&t=tt&d=2TdrBvABEGrBC_bDnUoKBxbOtj0sjGIy1JJrExxZxZM&co=faf9f7&ct=3d3929" alt="Visitor map">
+          </a>
+        </div>
+
         <div class="info-panel">
           <div class="info-row">
             <span class="info-label">学校</span>
@@ -106,8 +120,8 @@
         <h3 class="section-title">个人简介</h3>
         <div class="section-body">
           <p>
-            侯思涵，男，汉族，湖南衡东人。高中就读于南京市中华中学，2023 年江苏高考物理满分，
-            现就读于南开大学数学科学学院省身班。
+            侯思涵，男，汉族，湖南衡东人。现就读于南开大学数学科学学院省身班。
+            高中毕业于南京市中华中学，2023 年江苏高考物理满分。
           </p>
           <p>
             目前我在南开大学计算机学院参与科研，导师为郭青教授。除学习与科研之外，
@@ -141,12 +155,48 @@
 
           <div class="card timeline-item">
             <div class="experience-item">
-              <div class="institution-badge">ZH</div>
+              <div class="institution-badge">中华</div>
               <div class="experience-content">
                 <p class="exp-title"><strong>南京市中华中学</strong></p>
                 <p class="exp-detail">高中</p>
                 <p class="exp-detail">2023 年江苏高考物理满分。</p>
                 <p class="exp-period">2020.09 - 2023.06</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card timeline-item">
+            <div class="experience-item">
+              <div class="institution-badge">河西</div>
+              <div class="experience-content">
+                <p class="exp-title"><strong>南京市金陵中学河西分校</strong></p>
+                <p class="exp-detail">初中</p>
+                <p class="exp-detail">完成初中阶段学习。</p>
+                <p class="exp-period">2017.09 - 2020.06</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card timeline-item">
+            <div class="experience-item">
+              <div class="institution-badge">金小</div>
+              <div class="experience-content">
+                <p class="exp-title"><strong>南京市金陵中学实验小学</strong></p>
+                <p class="exp-detail">小学</p>
+                <p class="exp-detail">完成小学阶段后期学习。</p>
+                <p class="exp-period">2014.09 - 2017.06</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card timeline-item">
+            <div class="experience-item">
+              <div class="institution-badge">湘潭</div>
+              <div class="experience-content">
+                <p class="exp-title"><strong>湘潭市熙春路逸夫小学</strong></p>
+                <p class="exp-detail">小学</p>
+                <p class="exp-detail">完成小学阶段前期学习。</p>
+                <p class="exp-period">2011.06 - 2014.06</p>
               </div>
             </div>
           </div>
@@ -221,6 +271,17 @@
     (function () {
       const themeToggle = document.getElementById("themeToggle");
       const icon = themeToggle.querySelector("i");
+      const iconHint = document.getElementById("iconHint");
+      const mapImage = document.getElementById("clustrmap-sidebar");
+
+      function updateMap(isDark) {
+        if (!mapImage) return;
+        const base = "https://www.clustrmaps.com/map_v2.png?w=300&t=tt&d=2TdrBvABEGrBC_bDnUoKBxbOtj0sjGIy1JJrExxZxZM";
+        const cl = isDark ? "e28a67" : "c2714f";
+        const co = isDark ? "1a1917" : "faf9f7";
+        const ct = isDark ? "d1cec7" : "3d3929";
+        mapImage.src = base + "&cl=" + cl + "&co=" + co + "&ct=" + ct;
+      }
 
       function setTheme(isDark) {
         if (isDark) {
@@ -232,6 +293,7 @@
           icon.classList.replace("fa-sun", "fa-moon");
           localStorage.setItem("theme", "light");
         }
+        updateMap(isDark);
       }
 
       const savedTheme = localStorage.getItem("theme");
@@ -265,8 +327,6 @@
           }
         });
       }
-
-      const iconHint = document.getElementById("iconHint");
 
       document.querySelectorAll(".social-icon[data-label]").forEach(function (item) {
         item.addEventListener("mouseenter", function () {

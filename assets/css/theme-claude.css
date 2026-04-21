@@ -249,6 +249,47 @@ body.theme-claude .icon-hint {
   font-family: "IBM Plex Mono", monospace;
 }
 
+body.theme-claude .school-badge-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 18px;
+}
+
+body.theme-claude .school-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: var(--surface-strong);
+  border: 1px solid var(--line);
+  color: var(--text-soft);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+body.theme-claude .visitor-map {
+  margin: 0 0 18px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--surface-strong);
+}
+
+body.theme-claude .visitor-map a {
+  display: block;
+  line-height: 0;
+}
+
+body.theme-claude .visitor-map img {
+  width: 100%;
+  display: block;
+  border: 0;
+}
+
 body.theme-claude .info-panel {
   display: grid;
   gap: 10px;

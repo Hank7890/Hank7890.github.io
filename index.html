@@ -62,19 +62,18 @@
           <a class="secondary-action" href="en.html">English</a>
         </div>
 
-        <div class="contact-links">
-          <div class="contact-link-group">
-            <a class="contact-link" href="mailto:2310303@nankai.edu.cn" title="School Email">School Email</a>
-            <button class="contact-copy" type="button" data-copy="2310303@nankai.edu.cn">复制</button>
-          </div>
-          <div class="contact-link-group">
-            <a class="contact-link" href="mailto:sihanhou123@gmail.com" title="Personal Email">Personal Email</a>
-            <button class="contact-copy" type="button" data-copy="sihanhou123@gmail.com">复制</button>
-          </div>
-          <div class="contact-link-group">
-            <a class="contact-link" href="assets/cv/Sihan_Hou_CV.pdf" title="CV" target="_blank" rel="noreferrer">CV / 简历</a>
-          </div>
+        <div class="social-icons">
+          <button class="social-icon copy-icon" type="button" data-copy="2310303@nankai.edu.cn" data-label="School Email">
+            <i class="fa-solid fa-envelope"></i>
+          </button>
+          <button class="social-icon copy-icon" type="button" data-copy="sihanhou123@gmail.com" data-label="Personal Email">
+            <i class="fa-regular fa-paper-plane"></i>
+          </button>
+          <a class="social-icon" href="assets/cv/Sihan_Hou_CV.pdf" title="CV" target="_blank" rel="noreferrer" data-label="CV / 简历">
+            <i class="fa-solid fa-file-lines"></i>
+          </a>
         </div>
+        <p class="icon-hint" id="iconHint">点击邮箱图标可复制地址</p>
 
         <div class="info-panel">
           <div class="info-row">
@@ -267,20 +266,31 @@
         });
       }
 
-      document.querySelectorAll(".contact-copy").forEach(function (button) {
+      const iconHint = document.getElementById("iconHint");
+
+      document.querySelectorAll(".social-icon[data-label]").forEach(function (item) {
+        item.addEventListener("mouseenter", function () {
+          if (iconHint) iconHint.textContent = item.getAttribute("data-label");
+        });
+        item.addEventListener("focus", function () {
+          if (iconHint) iconHint.textContent = item.getAttribute("data-label");
+        });
+      });
+
+      document.querySelectorAll(".copy-icon").forEach(function (button) {
         button.addEventListener("click", async function () {
           const text = button.getAttribute("data-copy");
           try {
             await navigator.clipboard.writeText(text);
-            const original = button.textContent;
-            button.textContent = "已复制";
-            setTimeout(function () {
-              button.textContent = original;
-            }, 1200);
+            if (iconHint) iconHint.textContent = "已复制: " + text;
           } catch (error) {
             window.prompt("复制这个邮箱地址：", text);
           }
         });
+      });
+
+      document.querySelector(".social-icons")?.addEventListener("mouseleave", function () {
+        if (iconHint) iconHint.textContent = "点击邮箱图标可复制地址";
       });
     })();
   </script>

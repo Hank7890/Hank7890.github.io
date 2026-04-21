@@ -220,7 +220,7 @@ body.theme-claude .social-icons {
   margin-bottom: 18px;
 }
 
-body.theme-claude .social-icons a {
+body.theme-claude .social-icon {
   width: 40px;
   height: 40px;
   display: inline-flex;
@@ -231,61 +231,22 @@ body.theme-claude .social-icons a {
   color: var(--text);
   background: var(--surface-strong);
   text-decoration: none;
-}
-
-body.theme-claude .social-icons a:hover {
-  color: #fff;
-  background: var(--accent);
-  border-color: var(--accent);
-}
-
-body.theme-claude .contact-links {
-  display: grid;
-  gap: 10px;
-  margin-bottom: 18px;
-}
-
-body.theme-claude .contact-link-group {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-}
-
-body.theme-claude .contact-link {
-  flex: 1;
-  min-width: 0;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 14px;
-  border-radius: 999px;
-  border: 1px solid var(--line);
-  background: var(--surface-strong);
-  color: var(--text);
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 700;
-}
-
-body.theme-claude .contact-link:hover {
-  color: #fff;
-  background: var(--accent);
-  border-color: var(--accent);
-}
-
-body.theme-claude .contact-copy {
-  border: 1px solid var(--line);
-  background: transparent;
-  color: var(--text-soft);
-  border-radius: 999px;
-  padding: 10px 12px;
-  font-size: 13px;
   cursor: pointer;
+  font: inherit;
 }
 
-body.theme-claude .contact-copy:hover {
+body.theme-claude .social-icon:hover {
+  color: #fff;
+  background: var(--accent);
   border-color: var(--accent);
-  color: var(--accent-strong);
+}
+
+body.theme-claude .icon-hint {
+  min-height: 20px;
+  margin: -6px 0 18px;
+  color: var(--text-soft);
+  font-size: 13px;
+  font-family: "IBM Plex Mono", monospace;
 }
 
 body.theme-claude .info-panel {

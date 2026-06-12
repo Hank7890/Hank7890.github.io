@@ -1,110 +1,28 @@
-# 个人主页模板
+# hank7890.github.io
 
-这是一个可以直接部署到 GitHub Pages 的静态个人主页模板。  
-核心文件很简单：
+侯思涵（Sihan Hou）的个人主页，纯静态站点，托管在 GitHub Pages。
 
-- `index.html`：页面内容
-- `assets/css/theme-claude.css`：主题样式
-- `assets/img/`：头像、图标、学校或公司 Logo
-- `assets/cv/`：简历 PDF
+- 在线访问：<https://hank7890.github.io/>（中文） / <https://hank7890.github.io/en.html>（英文）
+- 视觉风格参考 [al-folio](https://github.com/alshedivat/al-folio)，用纯 HTML/CSS/JS 复刻，无需 Jekyll 或任何构建工具
 
-## 这个仓库我已经帮你改成什么
+## 文件结构
 
-原仓库是一个学术主页模板，我已经把它改成更通用的个人主页版本，适合：
-
-- 学生主页
-- 开发者主页
-- 求职作品集
-- 科研或竞赛展示页
-
-现在你只需要把页面里的占位内容替换掉，就可以上线。
-
-## 你接下来需要替换的内容
-
-打开 `index.html`，搜索并替换这些字段：
-
-- `[你的名字]`
-- `your_email@example.com`
-- `your-username`
-- `[城市 / 学校 / 公司]`
-- `[项目名称 A/B/C]`
-- `[职位名称]`
-- `[你的城市 / 时区]`
-
-建议优先改这些部分：
-
-1. 页面标题和个人简介
-2. 左侧头像、邮箱、社交链接
-3. 经历区块
-4. 项目区块
-5. 联系方式
-
-## 资源文件怎么换
-
-### 头像
-
-把你的头像放到：
-
-- `assets/img/avatar.jpg`
-
-如果你想保留原图做备份，也可以继续用现有命名，只要把 `index.html` 里的路径改掉。
-
-### 简历
-
-把你的 PDF 简历放到：
-
-- `assets/cv/`
-
-然后把 `index.html` 里的简历链接改成你的文件名。
-
-### Logo
-
-如果你不需要学校或公司 Logo，可以：
-
-- 替换成你自己的 Logo
-- 或直接删掉对应的 `<img>` 标签
-
-## 如何发布到 GitHub Pages
-
-如果这个仓库就是你的主页仓库，仓库名建议是：
-
-- `你的 GitHub 用户名.github.io`
-
-然后在 GitHub 仓库设置里启用 Pages：
-
-1. 打开 `Settings`
-2. 进入 `Pages`
-3. `Build and deployment` 选择 `Deploy from a branch`
-4. 分支选 `main`
-5. 文件夹选 `/ (root)`
-6. 保存
-
-几分钟后，你的主页会出现在：
-
-- `https://你的用户名.github.io`
-
-## 建议你下一步这样做
-
-如果你要把它真正变成你的主页，不要只换名字，最好补上这些内容：
-
-- 一段具体的自我介绍
-- 2 到 4 段真实经历
-- 2 到 3 个最能代表你的项目
-- 明确的联系方式
-
-内容比花哨更重要，但空白和套话都不行。
+- `index.html` — 中文页
+- `en.html` — 英文页
+- `assets/css/al-folio.css` — 全部样式（含明暗两套主题变量）
+- `assets/js/theme.js` — 明暗模式切换 + 邮箱点击复制
+- `assets/img/` — 头像、favicon（足迹地图为内联 SVG，直接写在两个 HTML 里）
+- `assets/cv/Sihan_Hou_CV.pdf` — 简历
 
 ## 本地预览
 
-这是纯静态页面，直接双击 `index.html` 就能看。  
-如果你想用本地服务器预览，也可以在仓库目录运行：
-
 ```powershell
-python -m http.server 8000
+python -m http.server 8765
 ```
 
-然后访问：
+然后访问 <http://localhost:8765/>。
 
-```text
-http://localhost:8000
-```
+## 说明
+
+- 明暗模式：跟随系统偏好，手动切换后记入 `localStorage`；`<head>` 内联脚本在渲染前设置主题，避免闪烁。
+- 足迹地图：基于省级行政区划边界数据投影简化生成的内联 SVG，配色走 CSS 变量，随主题自动切换，生活过的省份高亮显示。

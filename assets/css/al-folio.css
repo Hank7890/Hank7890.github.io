@@ -1,0 +1,452 @@
+/* al-folio style theme — pure CSS port (no Jekyll).
+   Palette and typography follow alshedivat/al-folio defaults. */
+
+:root {
+  --global-bg-color: #ffffff;
+  --global-text-color: #000000;
+  --global-text-color-light: #828282;
+  --global-theme-color: #b509ac;
+  --global-hover-color: #b509ac;
+  --global-divider-color: rgba(0, 0, 0, 0.1);
+  --global-card-bg-color: #ffffff;
+  --global-code-bg-color: rgba(181, 9, 172, 0.05);
+  --map-land-color: #f0f0f1;
+  --map-stroke-color: #c6c6cb;
+  --map-visited-color: #f3dcf1;
+}
+
+html[data-theme="dark"] {
+  --global-bg-color: #1c1c1d;
+  --global-text-color: #e8e8e8;
+  --global-text-color-light: #aaaaaa;
+  --global-theme-color: #2698ba;
+  --global-hover-color: #2698ba;
+  --global-divider-color: #424246;
+  --global-card-bg-color: #212529;
+  --global-code-bg-color: #2c3237;
+  --map-land-color: #2a2e33;
+  --map-stroke-color: #54585f;
+  --map-visited-color: #1f3d47;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--global-text-color);
+  background-color: var(--global-bg-color);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--global-theme-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--global-hover-color);
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ---------- top navigation ---------- */
+
+.site-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: var(--global-bg-color);
+  border-bottom: 1px solid var(--global-divider-color);
+}
+
+.nav-inner {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  min-height: 57px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.nav-brand {
+  font-size: 1.05rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: var(--global-text-color);
+  padding: 0.85rem 0;
+}
+
+.nav-brand:hover {
+  color: var(--global-hover-color);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  display: block;
+  padding: 0.85rem 0.65rem;
+  font-size: 0.95rem;
+  color: var(--global-text-color);
+}
+
+.nav-links a:hover {
+  color: var(--global-hover-color);
+  text-decoration: none;
+}
+
+.theme-toggle {
+  border: none;
+  background: none;
+  padding: 0.85rem 0.65rem;
+  font-size: 0.95rem;
+  color: var(--global-text-color);
+  cursor: pointer;
+  line-height: inherit;
+}
+
+.theme-toggle:hover {
+  color: var(--global-hover-color);
+}
+
+/* ---------- main content column ---------- */
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 100px 1.25rem 3rem;
+}
+
+.post-title {
+  font-family: "Roboto Slab", "Noto Serif SC", "Songti SC", Georgia, serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 1.25;
+  margin: 0 0 0.25rem;
+}
+
+.post-title .font-weight-bold {
+  font-weight: 700;
+}
+
+.post-title .title-alt {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--global-text-color-light);
+  margin-left: 0.4rem;
+  white-space: nowrap;
+}
+
+.post-desc {
+  font-size: 1.06rem;
+  color: var(--global-text-color-light);
+  margin: 0 0 2.25rem;
+}
+
+.post-desc a {
+  color: var(--global-text-color-light);
+  text-decoration: underline;
+  text-decoration-color: var(--global-divider-color);
+}
+
+.post-desc a:hover {
+  color: var(--global-hover-color);
+}
+
+/* ---------- profile photo (floats right, al-folio about layout) ---------- */
+
+.profile {
+  float: right;
+  width: 38%;
+  margin: 0.25rem 0 0.75rem 1.5rem;
+  text-align: center;
+}
+
+.profile img {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.profile .address {
+  margin-top: 0.6rem;
+  font-size: 0.82rem;
+  color: var(--global-text-color-light);
+  line-height: 1.5;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* ---------- sections ---------- */
+
+section {
+  margin-top: 3rem;
+}
+
+section h2 {
+  font-family: "Roboto Slab", "Noto Serif SC", "Songti SC", Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 0 0 1.1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--global-divider-color);
+}
+
+section p {
+  margin: 0 0 1rem;
+}
+
+/* news / education rows: grey date column + body, like al-folio's news table */
+
+.entry {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0.55rem 0;
+}
+
+.entry + .entry {
+  border-top: 1px solid transparent; /* keep rhythm without visible lines, as in al-folio news */
+}
+
+.entry-date {
+  flex: 0 0 9.5rem;
+  font-size: 0.92rem;
+  color: var(--global-text-color-light);
+  padding-top: 0.1rem;
+}
+
+.entry-body {
+  flex: 1;
+}
+
+.entry-body .entry-title {
+  margin: 0;
+}
+
+.entry-body .entry-note {
+  margin: 0.1rem 0 0;
+  font-size: 0.94rem;
+  color: var(--global-text-color-light);
+}
+
+/* ---------- map figure ---------- */
+
+.map-figure {
+  margin: 0;
+}
+
+.map-figure figcaption {
+  margin-top: 0.5rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--global-text-color-light);
+}
+
+/* inline SVG journey map — colors follow the page theme */
+
+.journey-map {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.journey-map .province {
+  fill: var(--map-land-color);
+  stroke: var(--map-stroke-color);
+  stroke-width: 0.7;
+  stroke-linejoin: round;
+}
+
+.journey-map .province.visited {
+  fill: var(--map-visited-color);
+}
+
+.journey-map .route {
+  fill: none;
+  stroke: var(--global-theme-color);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-dasharray: 0.5 6.5;
+}
+
+.journey-map .city-ring {
+  fill: var(--global-bg-color);
+  stroke: var(--global-theme-color);
+  stroke-width: 2;
+}
+
+.journey-map .city-dot {
+  fill: var(--global-theme-color);
+}
+
+.journey-map .city-name {
+  fill: var(--global-text-color);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.journey-map .city-year {
+  fill: var(--global-text-color-light);
+  font-size: 11.5px;
+  font-weight: 400;
+}
+
+/* ---------- contact ---------- */
+
+.contact-list {
+  list-style: none;
+  margin: 0 0 1.5rem;
+  padding: 0;
+}
+
+.contact-list li {
+  padding: 0.3rem 0;
+}
+
+.contact-list .contact-label {
+  display: inline-block;
+  min-width: 9.5rem;
+  color: var(--global-text-color-light);
+  font-size: 0.95rem;
+}
+
+.social {
+  text-align: center;
+  padding: 1rem 0 0;
+}
+
+.social a {
+  display: inline-block;
+  padding: 0 0.55rem;
+  font-size: 1.8rem;
+  color: var(--global-text-color);
+}
+
+.social a:hover {
+  color: var(--global-hover-color);
+  text-decoration: none;
+}
+
+/* click-to-copy email feedback */
+
+.copy-state {
+  margin-left: 0.6rem;
+  font-size: 0.85rem;
+  color: var(--global-theme-color);
+}
+
+.copy-toast {
+  position: fixed;
+  bottom: 26px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 200;
+  padding: 0.45rem 1rem;
+  background-color: var(--global-card-bg-color);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 0.4rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  font-size: 0.85rem;
+  color: var(--global-text-color);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+
+.copy-toast.show {
+  opacity: 1;
+}
+
+/* ---------- footer ---------- */
+
+.site-footer {
+  border-top: 1px solid var(--global-divider-color);
+  margin-top: 3.5rem;
+}
+
+.site-footer .footer-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1.4rem 1.25rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--global-text-color-light);
+}
+
+.site-footer a {
+  color: var(--global-text-color-light);
+  text-decoration: underline;
+  text-decoration-color: var(--global-divider-color);
+}
+
+.site-footer a:hover {
+  color: var(--global-hover-color);
+}
+
+/* ---------- responsive ---------- */
+
+@media (max-width: 700px) {
+  .post-title {
+    font-size: 2rem;
+  }
+
+  .post-title .title-alt {
+    display: block;
+    margin-left: 0;
+  }
+
+  .profile {
+    float: none;
+    width: 85%;
+    margin: 0 auto 1.5rem;
+  }
+
+  .entry {
+    flex-direction: column;
+    gap: 0.1rem;
+    padding: 0.7rem 0;
+  }
+
+  .entry-date {
+    flex: none;
+  }
+
+  .nav-inner {
+    padding: 0 0.75rem;
+  }
+
+  .nav-links a,
+  .theme-toggle {
+    padding: 0.85rem 0.45rem;
+    font-size: 0.9rem;
+  }
+}

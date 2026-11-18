@@ -10,9 +10,6 @@
   --global-divider-color: rgba(0, 0, 0, 0.1);
   --global-card-bg-color: #ffffff;
   --global-code-bg-color: rgba(181, 9, 172, 0.05);
-  --map-land-color: #f0f0f1;
-  --map-stroke-color: #c6c6cb;
-  --map-visited-color: #f3dcf1;
 }
 
 html[data-theme="dark"] {
@@ -24,9 +21,6 @@ html[data-theme="dark"] {
   --global-divider-color: #424246;
   --global-card-bg-color: #212529;
   --global-code-bg-color: #2c3237;
-  --map-land-color: #2a2e33;
-  --map-stroke-color: #54585f;
-  --map-visited-color: #1f3d47;
 }
 
 * {
@@ -254,68 +248,6 @@ section p {
   margin: 0.1rem 0 0;
   font-size: 0.94rem;
   color: var(--global-text-color-light);
-}
-
-/* ---------- map figure ---------- */
-
-.map-figure {
-  margin: 0;
-}
-
-.map-figure figcaption {
-  margin-top: 0.5rem;
-  text-align: center;
-  font-size: 0.85rem;
-  color: var(--global-text-color-light);
-}
-
-/* inline SVG journey map — colors follow the page theme */
-
-.journey-map {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.journey-map .province {
-  fill: var(--map-land-color);
-  stroke: var(--map-stroke-color);
-  stroke-width: 0.7;
-  stroke-linejoin: round;
-}
-
-.journey-map .province.visited {
-  fill: var(--map-visited-color);
-}
-
-.journey-map .route {
-  fill: none;
-  stroke: var(--global-theme-color);
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-dasharray: 0.5 6.5;
-}
-
-.journey-map .city-ring {
-  fill: var(--global-bg-color);
-  stroke: var(--global-theme-color);
-  stroke-width: 2;
-}
-
-.journey-map .city-dot {
-  fill: var(--global-theme-color);
-}
-
-.journey-map .city-name {
-  fill: var(--global-text-color);
-  font-size: 14px;
-  font-weight: 500;
-}
-
-.journey-map .city-year {
-  fill: var(--global-text-color-light);
-  font-size: 11.5px;
-  font-weight: 400;
 }
 
 /* ---------- contact ---------- */
